@@ -1,0 +1,11 @@
+{
+  "name": "microservice",
+  "version": "1.0.0",
+  "description": "This is simple node application for microservice",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravi Tambade",
+  "license": "ISC"
+}
