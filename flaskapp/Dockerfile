@@ -1,7 +1,19 @@
-FROM python:3.7-alpine
-RUN mkdir /app
+# start by pulling the python image
+FROM python:3.8-alpine
+
+# copy the requirements file into the image
+COPY ./requirements.txt /app/requirements.txt
+
+# switch working directory
 WORKDIR /app
-ADD requirements.txt /app
-ADD main.py /app
-RUN pip3 install -r requirements.txt
-CMD ["gunicorn", "-w 4", "-b", "0.0.0.0:8000", "main:app"]
+
+# install the dependencies and packages in the requirements file
+RUN pip install -r requirements.txt
+
+# copy every content from the local file to the image
+COPY . /app
+
+# configure the container to run in an executed manner
+ENTRYPOINT [ "python" ]
+
+CMD ["view.py" ]
