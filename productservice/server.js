@@ -14,6 +14,7 @@ var productController=function(req, res){
   res.send(products);
 };
 
+
 // setting router to map requests  with controllers
 app.get ('/products',productController);
 var server = app.listen(8086, function () {

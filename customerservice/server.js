@@ -1,7 +1,5 @@
 var express = require('express');
 var app = express();
-
-
 //Reusable controllers
 var customerController=function (req, res) {
   console.log("CAlling rest api");

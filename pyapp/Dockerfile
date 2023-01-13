@@ -1,3 +1,3 @@
 FROM python
-COPY ./src
+COPY . /src
 CMD ["python","/src/index.py"]
